@@ -24,13 +24,18 @@
 - Feature: "Playlists" are not a native feature, and must be provided via plugins
 - Feature: VideoJS plugins are not noteworthy enough to have common CDN's available, hence should be provided locally (via NPM)
 - Requirement: Setup NPM for VanillaJS Website
-- Misc: Consider placing all webpages in a `/pages/` folder, so as to keep the root directory clean
+- Misc: Consider placing all webpages in a `/pages/` or `/public/` folder, so as to keep the root directory clean
 - Misc: Consider placing all resources into appropriate categorical folders
   - Example: Images and videos and audio in `/media/`
   - Example: Stylesheets in `/styles/`
+  - Example: Website-specific JavaScript in `/src/`
+- Feature: Custom styling requires the base theme be included first, and then the custom theme
 
 ## VideoJS References
-- [ ] [Custom Video Player in React JS](https://www.youtube.com/watch?v=oITDcIjJBlY)
+- [x] [YouTube: HTML5 Video Programming](https://www.youtube.com/playlist?list=PLSkTiyK6-uFd85cPVw6RcXn9MFNwms6L3)
+- [x] [YouTube: Custom Video Player in React JS](https://www.youtube.com/watch?v=oITDcIjJBlY)
+  - Suggests a much better way of managing a website
+  - Using NPM, JSX
 - [x] [Mozilla: `<source>`: The Media or Image Source element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/source)
 - [x] [Mozilla: `<video>`: The Video Embed element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video)
 - [x] [GeeksForGeeks: HTML `<video>` crossorigin Attribute](https://www.geeksforgeeks.org/html-video-crossorigin-attribute/)
@@ -55,12 +60,32 @@
 - Setup: Creates `node_packages` and places each plugin as a sub-directory
 - Setup: Run `` npm install videojs `` to add VideoJS
 - Setup: Run `` npm install videojs-playlist `` to add a VideoJS Plugin
+- Setup: Run `` npm install @videojs/themes ``
+- CRUCIAL: Node-style-javascript is *incompatible* with browser-style-javascript, a ***BUNDLER*** must be used to convert Node-Packages into useable Browser-Libraries (See [Bundler Notes](#bundler-notes))
+- Misc: [Bootstrap](https://www.npmjs.com/package/bootstrap) and [LoDash](https://lodash.com/) are commonly included packages that just makes things better
+  - (`` npm install bootstrap@v5.2.1 ``, `` npm install lodash ``)
+  - Warning: LoDash requires *bundling* before using (See [Bundler Notes](#bundler-notes))
 
 ## NPM References
-- [ ] [NPM For Front-End Development - Node.js Modules In The Browser](https://www.youtube.com/watch?v=dHHEz-qDvko)
-- [ ] [Module Bundlers Explained... Webpack, Rollup, Parcel, and Snowpack](https://www.youtube.com/watch?v=5IG4UmULyoA)
-- [ ] [Create Web Components by using Google Lit, publish them on Npm and use them in React, Angular ...](https://www.youtube.com/watch?v=qaz8tufQKIU)
-- [ ] [Easy Frontend JS Workflow With No Framework](https://www.youtube.com/watch?v=8rD9amRSOQY)
+- [x] [YouTube: NPM For Front-End Development - Node.js Modules In The Browser](https://www.youtube.com/watch?v=dHHEz-qDvko)
+- [x] [YouTube: Module Bundlers Explained... Webpack, Rollup, Parcel, and Snowpack](https://www.youtube.com/watch?v=5IG4UmULyoA)
+- [ ] [YouTube: Easy Frontend JS Workflow With No Framework](https://www.youtube.com/watch?v=8rD9amRSOQY)
+- [x] [LogRocket: The top latest build tools for JavaScript](https://blog.logrocket.com/the-top-latest-build-tools-for-javascript/)
+- [x] [GeeksForGeeks: What is global installation of dependencies in Node.js ?](https://www.geeksforgeeks.org/what-is-global-installation-of-dependencies-in-node-js/)
+
+## Bundler Notes
+- Setup: Run `` npm install --save-dev webpack webpack-cli `` (Note how webpack is not needed in the final website itself, so we do not save it for "production")
+  - Alternative: Run `` npm install --global webpack webpack-cli `` (This installs it for a given computer, not just a given project)
+- CRUCIAL: Must edit `packages.json` with relevant building parameters, see [YouTube: Module Bundlers Explained... Webpack, Rollup, Parcel, and Snowpack](https://www.youtube.com/watch?v=5IG4UmULyoA) for details
+- Execution: Run `` npm run build ``
+- CRUCIAL: Most builders output results to `/dist/`, must link to `/dist/` from html (webpage code)
+  - Example: Bundling Website Code
+    - Old: `` <script type="module" href="../src/index.js"></script> `` 
+    - New: `` <script type="module" href="../dist/main.js"></script> ``
+- Ecosystem: There are a lot of bundlers, with their own annoying differences
+  - WebPack: Requires lots of configuration, takes awhile to build
+  - Parcel: 
+  - Snowpack: Faster build times
 
 ## Credits
 - [Today is Friday, in California](https://www.youtube.com/watch?v=9WaYCdQ8FOQ)
@@ -77,3 +102,4 @@
 - [ ] [`videojs-errors` - A plugin that displays user-friendly messages when Video.js encounters an error.](https://www.npmjs.com/package/videojs-errors)
 - [ ] [`videojs-hotkeys` - A plugin for Video.js that enables keyboard hotkeys when the player has focus.](https://www.npmjs.com/package/videojs-hotkeys)
 - [ ] [`videojs-share` - Share plugin for video.js. Allows user to copy video url / embed code and share video to social networks.](https://www.npmjs.com/package/videojs-share)
+- [ ] [`@videojs/themes` - Monorepo for Video.js themes 💅.](https://www.npmjs.com/package/@videojs/themes)
