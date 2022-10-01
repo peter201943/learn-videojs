@@ -19,7 +19,11 @@
 - []()
 
 ## Notes
-- Native video player must be muted to automatically play
+- Misc: Native video player must be muted to automatically play
+- CRUCIAL: `<video>`  must have `` data-setup="{}" `` attribute
+- CRUCIAL: `<video>`  must have `` class="video-js" `` attribute
+- CRUCIAL: `<body>`   must have `` <script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script> `` element *after* all other elements
+- CRUCIAL: `<head>`   must have `` <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet" /> `` element
 
 ## Credits
 - [Today is Friday, in California](https://www.youtube.com/watch?v=9WaYCdQ8FOQ)

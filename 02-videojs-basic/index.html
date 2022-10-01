@@ -5,7 +5,6 @@
     <title>Basic VideoJS Tests</title>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="stylesheet" href="../solarized-dark.css"/>
-    <!-- TODO: Setup VideoJS Dependencies -->
     <!-- Video Stylesheet -->
     <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet" />
   </head>
@@ -16,7 +15,7 @@
 
       <div id="auto-mp4-test">
         <h2>Automatically Play MP4 Forever</h2>
-        <video width="320" height="240" controls autoplay muted preload loop class="video-js">
+        <video width="320" height="240" controls autoplay muted preload loop class="video-js" data-setup="{}">
           <source src="../res/friday.mp4" type="video/mp4"/>
           Browser Video Unsupported
         </video>
@@ -24,7 +23,7 @@
 
       <div id="webm-test">
         <h2>WEBM</h2>
-        <video width="320" height="240" controls class="video-js">
+        <video width="320" height="240" controls class="video-js vjs-big-play-centered" data-setup="{}">
           <source src="../res/rat.webm" type="video/webm"/>
           Browser Video Unsupported
         </video>
@@ -32,7 +31,7 @@
 
       <div id="ext-test">
         <h2>External Source Test</h2>
-        <video width="320" height="240" controls cors="use-credentials" class="video-js">
+        <video width="320" height="240" controls cors="use-credentials" class="video-js" data-setup="{}">
           <source src="https://upload.wikimedia.org/wikipedia/commons/transcoded/3/3b/UK_and_Lithuanian_troops_conduct_anti-tank_live-fire_training_%282022-03-08%29.webm/UK_and_Lithuanian_troops_conduct_anti-tank_live-fire_training_%282022-03-08%29.webm.720p.webm" type="video/webm"/>
           Browser Video Unsupported
         </video>
