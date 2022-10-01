@@ -40,7 +40,6 @@
       <div>
         <h2>Playlist Test</h2>
         <video id="playlist-video" width="320" height="240" controls class="video-js vjs-big-play-centered" data-setup='{"fluid": true}'>
-          <source src="../../media/rat.webm" type="video/webm"/>
           <p class="vjs-no-js">Inferior Browser User: <a href="https://videojs.com/html5-video-support/">Upgrade Immediately</a></p>
         </video>
       </div>
@@ -51,24 +50,19 @@
     <script src="../node_modules/video.js/dist/video.min.js"></script>
 
     <!-- Plugin Loader Goes After Library Loading -->
-    <script src="https://cdn.sc.gl/videojs-hotkeys/0.2/videojs.hotkeys.min.js"></script>
+    <script src="../node_modules/videojs-playlist/dist/videojs-playlist.js"></script>
 
     <!-- Final Configuration Code -->
     <script type="text/javascript">
-      // Note that by having these sections here, the `data-setup` attribute is no longer needed in the `<video>` element
-      // (The `class="video-js"` is still necessary though)
-      // Note also that each video player can be configured differently
-
-      const ratVideoPlayer = videojs('rat-video', {
-        playbackRates: [1,2,3,4,5],   // Adds Youtube-Like Time Scaling
-        userActions: {hotkeys: true}  // Adds some keys (m=mute, etcetera) (built-in hotkeys to VideoJS)
-      });
-
-      const javelinVideoPlayer = videojs('javelin-video', {
-        plugins: {    // this enables the plugins to work
-          hotkeys: {} // this allows a particular plugin (without configuration) to be activated
-        }
-      });
+      const playlistVideoPlayer = videojs('playlist-video');
+      playlistVideoPlayer.playlist([
+        {sources: [{type: 'video/mp4', src: '../../media/playlist/cat-source-physics.mp4'}]},
+        {sources: [{type: 'video/mp4', src: '../../media/playlist/cat-head-crab-zombie.mp4'}]},
+        {sources: [{type: 'video/mp4', src: '../../media/playlist/dog-biscuit-attack.mp4'}]},
+        {sources: [{type: 'video/mp4', src: '../../media/playlist/welcome-to-life.mp4'}]},
+        {sources: [{type: 'video/mp4', src: '../../media/playlist/when-you-at-the.mp4'}]}
+      ]);
+      playlistVideoPlayer.playlist.autoadvance(0);
     </script>
   </body>
 </html>
