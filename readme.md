@@ -69,7 +69,7 @@
 ## NPM References
 - [x] [YouTube: NPM For Front-End Development - Node.js Modules In The Browser](https://www.youtube.com/watch?v=dHHEz-qDvko)
 - [x] [YouTube: Module Bundlers Explained... Webpack, Rollup, Parcel, and Snowpack](https://www.youtube.com/watch?v=5IG4UmULyoA)
-- [ ] [YouTube: Easy Frontend JS Workflow With No Framework](https://www.youtube.com/watch?v=8rD9amRSOQY)
+- [x] [YouTube: Easy Frontend JS Workflow With No Framework](https://www.youtube.com/watch?v=8rD9amRSOQY)
 - [x] [LogRocket: The top latest build tools for JavaScript](https://blog.logrocket.com/the-top-latest-build-tools-for-javascript/)
 - [x] [GeeksForGeeks: What is global installation of dependencies in Node.js ?](https://www.geeksforgeeks.org/what-is-global-installation-of-dependencies-in-node-js/)
 
