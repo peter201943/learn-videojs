@@ -27,7 +27,7 @@
 - [Wrap the Towel around the Rat carefully](https://www.youtube.com/watch?v=BTH40ElpYow)
   - [Manual Restraint and Common Compound Administration Routes in… JoVE Video](https://www.youtube.com/watch?v=s9skgg7dHIA)
 - Lithuanian Troops train with a Javelin
-  - [Wikipedia: FGM-148 Javelin: Training](https://en.wikipedia.org/wiki/FGM-148_Javelin#Training)
-    - [File:UK and Lithuanian troops conduct anti-tank live-fire training (2022-03-08).webm](https://en.wikipedia.org/wiki/File:UK_and_Lithuanian_troops_conduct_anti-tank_live-fire_training_(2022-03-08).webm)
+  - [File:UK and Lithuanian troops conduct anti-tank live-fire training (2022-03-08).webm](https://en.wikipedia.org/wiki/File:UK_and_Lithuanian_troops_conduct_anti-tank_live-fire_training_(2022-03-08).webm)
+    - [Wikipedia: FGM-148 Javelin: Training](https://en.wikipedia.org/wiki/FGM-148_Javelin#Training)
 
 
