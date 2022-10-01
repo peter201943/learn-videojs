@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="../../../src/solarized-dark.css"/>
     <!-- Video Stylesheet -->
     <link href="../node_modules/video.js/dist/video-js.min.css" rel="stylesheet" />
+    <!-- Playlist UI Stylesheet -->
+    <link href="../node_modules/videojs-playlist-ui/dist/videojs-playlist-ui.css" rel="stylesheet" />
   </head>
   <body>
     <div id="my-videos">
@@ -37,11 +39,12 @@
         </video>
       </div>
 
-      <div>
+      <div id="playlist-test">
         <h2>Playlist Test</h2>
         <video id="playlist-video" width="320" height="240" controls class="video-js vjs-big-play-centered" data-setup='{"fluid": true}'>
           <p class="vjs-no-js">Inferior Browser User: <a href="https://videojs.com/html5-video-support/">Upgrade Immediately</a></p>
         </video>
+        <div id="playlist-playlist" style="width:50%"></div>
       </div>
 
     </div>
@@ -53,7 +56,7 @@
     <script src="../node_modules/videojs-playlist/dist/videojs-playlist.js"></script>
 
     <!-- Plugin for the Plugin goes after the Plugin -->
-    <script src="../node_modules/videojs-playlist/dist/videojs-playlist-ui.js"></script>
+    <script src="../node_modules/videojs-playlist-ui/dist/videojs-playlist-ui.min.js"></script>
 
     <!-- Final Configuration Code -->
     <script type="text/javascript">
@@ -61,18 +64,37 @@
 
       // the sources *must* be listed here, videojs-playlist does not scan for multiple `<source>` tags in the HTML
       playlistVideoPlayer.playlist([
-        {sources: [{type: 'video/mp4', src: '../../media/playlist/cat-source-physics.mp4'}]},
-        {sources: [{type: 'video/mp4', src: '../../media/playlist/cat-head-crab-zombie.mp4'}]},
-        {sources: [{type: 'video/mp4', src: '../../media/playlist/dog-biscuit-attack.mp4'}]},
-        {sources: [{type: 'video/mp4', src: '../../media/playlist/welcome-to-life.mp4'}]},
-        {sources: [{type: 'video/mp4', src: '../../media/playlist/when-you-at-the.mp4'}]}
+        {
+          sources: [{type: 'video/mp4', src: '../../media/playlist/cat-source-physics.mp4'}],
+          name: "Cat Source Physics",
+          thumbnail: "../../media/images/froggie.png" // Note that this is not scaled down *at all*
+        },
+        {
+          sources: [{type: 'video/mp4', src: '../../media/playlist/cat-head-crab-zombie.mp4'}],
+          name: "Headcrab Zombie Cat"
+        },
+        {
+          sources: [{type: 'video/mp4', src: '../../media/playlist/dog-biscuit-attack.mp4'}],
+          name: "Dog Biscuit Attack"
+        },
+        {
+          sources: [{type: 'video/mp4', src: '../../media/playlist/welcome-to-life.mp4'}],
+          name: "Welcome to Life"
+        },
+        {
+          sources: [{type: 'video/mp4', src: '../../media/playlist/when-you-at-the.mp4'}],
+          name: "When You At The"
+        }
       ]);
 
       // this starts the playlist
       playlistVideoPlayer.playlist.autoadvance(0);
 
       // this tells the UI to activate
-      playlistVideoPlayer.playlistUI();
+      // NOTE that the "playlist" must be placed onto a **SEPARATE ELEMENT** than the video itself
+      // Hence why "getElementById" is used
+      // Also pay careful attention to the grammar of `playlistUi` (non-standard capitalization)
+      playlistVideoPlayer.playlistUi(document.getElementById('playlist-playlist'));
     </script>
   </body>
 </html>
