@@ -2,9 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8"/>
-    <title>Professional VideoJS Tests</title>
+    <title>VideoJS Script Tests</title>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <link rel="stylesheet" href="../solarized-dark.css"/>
+    <link rel="stylesheet" href="../../src/solarized-dark.css"/>
     <!-- Video Stylesheet -->
     <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet" />
   </head>
@@ -15,7 +15,7 @@
 
       <div id="auto-mp4-test">
         <h2>Automatically Play MP4 Forever</h2>
-        <video id="friday-video" width="320" height="240" class="video-js" data-setup='{"autoplay": "muted","controls": true, "loop": true, "fluid": true}'>
+        <video id="friday-video" width="320" height="240" class="video-js">
           <source src="../media/friday.mp4" type="video/mp4"/>
           <p class="vjs-no-js">Inferior Browser User: <a href="https://videojs.com/html5-video-support/">Upgrade Immediately</a></p>
         </video>
@@ -23,7 +23,7 @@
 
       <div id="webm-test">
         <h2>WEBM</h2>
-        <video id="rat-video" width="320" height="240" controls class="video-js vjs-big-play-centered" data-setup='{"fluid": true}'>
+        <video id="rat-video" width="320" height="240" controls class="video-js vjs-big-play-centered" data-setup="{}">
           <source src="../media/rat.webm" type="video/webm"/>
           <p class="vjs-no-js">Inferior Browser User: <a href="https://videojs.com/html5-video-support/">Upgrade Immediately</a></p>
         </video>
@@ -31,7 +31,7 @@
 
       <div id="ext-test">
         <h2>External Source Test</h2>
-        <video id="javelin-video" width="320" height="240" controls cors="use-credentials" class="video-js" data-setup='{"fluid": true}'>
+        <video id="javelin-video" width="320" height="240" controls cors="use-credentials" class="video-js" data-setup="{}">
           <source src="https://upload.wikimedia.org/wikipedia/commons/transcoded/3/3b/UK_and_Lithuanian_troops_conduct_anti-tank_live-fire_training_%282022-03-08%29.webm/UK_and_Lithuanian_troops_conduct_anti-tank_live-fire_training_%282022-03-08%29.webm.720p.webm" type="video/webm"/>
           <p class="vjs-no-js">Inferior Browser User: <a href="https://videojs.com/html5-video-support/">Upgrade Immediately</a></p>
         </video>
@@ -50,6 +50,12 @@
       // Note that by having these sections here, the `data-setup` attribute is no longer needed in the `<video>` element
       // (The `class="video-js"` is still necessary though)
       // Note also that each video player can be configured differently
+
+      const fridayVideoPlayer = videojs('friday-video', {
+        autoplay: 'muted',  // note that the corresponding `muted` attribute has been removed (from above) as this replaces it
+        controls: true,
+        loop: true
+      });
 
       const ratVideoPlayer = videojs('rat-video', {
         fluid: true,                  // Automatic Rescaling to Fit Window
