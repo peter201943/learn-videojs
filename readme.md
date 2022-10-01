@@ -18,7 +18,7 @@
 - []()
 
 ## Notes
-- Native Videoplayer must be muted to automatically play
+- Native video player must be muted to automatically play
 
 ## Credits
 - [Today is Friday, in California](https://www.youtube.com/watch?v=9WaYCdQ8FOQ)
