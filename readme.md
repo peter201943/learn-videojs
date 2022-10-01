@@ -11,7 +11,6 @@
 - **`04-videojs-pro/`**
   - A more professional setup, using NPM to manage plugins
   - TODO: Use a bundler
-  - TODO: Add a UI
   - Notice: Run `` npm install `` in this folder to run this example
 
 ## VideoJS Notes

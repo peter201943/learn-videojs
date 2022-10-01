@@ -94,7 +94,7 @@
       // NOTE that the "playlist" must be placed onto a **SEPARATE ELEMENT** than the video itself
       // Hence why "getElementById" is used
       // Also pay careful attention to the grammar of `playlistUi` (non-standard capitalization)
-      playlistVideoPlayer.playlistUi(document.getElementById('playlist-playlist'));
+      playlistVideoPlayer.playlistUi({el: document.getElementById('playlist-playlist')});
     </script>
   </body>
 </html>
