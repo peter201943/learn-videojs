@@ -52,9 +52,14 @@
     <!-- Plugin Loader Goes After Library Loading -->
     <script src="../node_modules/videojs-playlist/dist/videojs-playlist.js"></script>
 
+    <!-- Plugin for the Plugin goes after the Plugin -->
+    <script src="../node_modules/videojs-playlist/dist/videojs-playlist-ui.js"></script>
+
     <!-- Final Configuration Code -->
     <script type="text/javascript">
       const playlistVideoPlayer = videojs('playlist-video');
+
+      // the sources *must* be listed here, videojs-playlist does not scan for multiple `<source>` tags in the HTML
       playlistVideoPlayer.playlist([
         {sources: [{type: 'video/mp4', src: '../../media/playlist/cat-source-physics.mp4'}]},
         {sources: [{type: 'video/mp4', src: '../../media/playlist/cat-head-crab-zombie.mp4'}]},
@@ -62,7 +67,12 @@
         {sources: [{type: 'video/mp4', src: '../../media/playlist/welcome-to-life.mp4'}]},
         {sources: [{type: 'video/mp4', src: '../../media/playlist/when-you-at-the.mp4'}]}
       ]);
+
+      // this starts the playlist
       playlistVideoPlayer.playlist.autoadvance(0);
+
+      // this tells the UI to activate
+      playlistVideoPlayer.playlistUI();
     </script>
   </body>
 </html>
