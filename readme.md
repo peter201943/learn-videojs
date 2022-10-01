@@ -5,8 +5,8 @@
 - Created 2022-09-30 to learn about video players in web browsers
 
 ## Tutorials
-- [HTML5 Video Programming](https://www.youtube.com/playlist?list=PLSkTiyK6-uFd85cPVw6RcXn9MFNwms6L3)
-- [Custom Video Player in React JS](https://www.youtube.com/watch?v=oITDcIjJBlY)
+- [ ] [HTML5 Video Programming](https://www.youtube.com/playlist?list=PLSkTiyK6-uFd85cPVw6RcXn9MFNwms6L3)
+- [ ] [Custom Video Player in React JS](https://www.youtube.com/watch?v=oITDcIjJBlY)
 
 ## References
 - [`<source>`: The Media or Image Source element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/source)
