@@ -12,6 +12,7 @@
   - A more professional setup, using NPM to manage plugins
   - TODO: Use a bundler
   - TODO: Add a UI
+  - Notice: Run `` npm install `` in this folder to run this example
 
 ## VideoJS Notes
 - About: Created 2022-09-30 to learn about video players in web browsers, specifically [VideoJS](https://videojs.com/)
