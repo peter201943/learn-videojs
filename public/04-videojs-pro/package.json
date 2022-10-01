@@ -1,0 +1,26 @@
+{
+  "name": "learn-videojs-pt4-pro",
+  "version": "1.0.0",
+  "description": "A sample \"Professional\" use of VideoJS with a Playlist",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/peter201943/learn-videojs.git"
+  },
+  "keywords": [
+    "videojs",
+    "sample",
+    "learning",
+    "experiment",
+    "project"
+  ],
+  "author": "Peter Mangelsdorf",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/peter201943/learn-videojs/issues"
+  },
+  "homepage": "https://github.com/peter201943/learn-videojs#readme"
+}
