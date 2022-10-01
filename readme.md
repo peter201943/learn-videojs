@@ -10,6 +10,8 @@
   - Accessing VideoJS players from JavaScript `<script>` blocks
 - **`04-videojs-pro/`**
   - A more professional setup, using NPM to manage plugins
+  - TODO: Use a bundler
+  - TODO: Add a UI
 
 ## VideoJS Notes
 - About: Created 2022-09-30 to learn about video players in web browsers, specifically [VideoJS](https://videojs.com/)
