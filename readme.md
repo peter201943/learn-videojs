@@ -58,7 +58,7 @@
 - Note: `npm` can be used in any folder-level (even within a project which already has npm in use - but this is an advanced technique - not recommended for beginning)
 - Setup: `` npm init `` in appropriate folder
 - Setup: Creates `node_packages` and places each plugin as a sub-directory
-- Setup: Run `` npm install videojs `` to add VideoJS
+- Setup: Run `` npm install video.js `` to add VideoJS
 - Setup: Run `` npm install videojs-playlist `` to add a VideoJS Plugin
 - Setup: Run `` npm install @videojs/themes ``
 - CRUCIAL: Node-style-javascript is *incompatible* with browser-style-javascript, a ***BUNDLER*** must be used to convert Node-Packages into useable Browser-Libraries (See [Bundler Notes](#bundler-notes))

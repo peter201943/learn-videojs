@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/peter201943/learn-videojs/issues"
   },
-  "homepage": "https://github.com/peter201943/learn-videojs#readme"
+  "homepage": "https://github.com/peter201943/learn-videojs#readme",
+  "dependencies": {
+    "video.js": "^7.20.3"
+  }
 }
