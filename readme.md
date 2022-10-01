@@ -2,18 +2,18 @@
 # Learn VideoJS
 
 ## About
-- Created 2022-09-30 to learn about video players in web browsers
+Created 2022-09-30 to learn about video players in web browsers, specifically [VideoJS](https://videojs.com/)
 
 ## Tutorials
 - [ ] [HTML5 Video Programming](https://www.youtube.com/playlist?list=PLSkTiyK6-uFd85cPVw6RcXn9MFNwms6L3)
 - [ ] [Custom Video Player in React JS](https://www.youtube.com/watch?v=oITDcIjJBlY)
 
 ## References
-- [`<source>`: The Media or Image Source element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/source)
-- [`<video>`: The Video Embed element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video)
-- [HTML `<video>` crossorigin Attribute](https://www.geeksforgeeks.org/html-video-crossorigin-attribute/)
-- []()
-- []()
+- [Mozilla: `<source>`: The Media or Image Source element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/source)
+- [Mozilla: `<video>`: The Video Embed element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video)
+- [GeeksForGeeks: HTML `<video>` crossorigin Attribute](https://www.geeksforgeeks.org/html-video-crossorigin-attribute/)
+- [Mozilla: `<script>`: The Script element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script)
+- [Multiple initialization of Video.js player on ajax loaded part of page](https://stackoverflow.com/questions/14070127/multiple-initialization-of-video-js-player-on-ajax-loaded-part-of-page)
 - []()
 - []()
 - []()
@@ -34,4 +34,7 @@
   - [File:UK and Lithuanian troops conduct anti-tank live-fire training (2022-03-08).webm](https://en.wikipedia.org/wiki/File:UK_and_Lithuanian_troops_conduct_anti-tank_live-fire_training_(2022-03-08).webm)
     - [Wikipedia: FGM-148 Javelin: Training](https://en.wikipedia.org/wiki/FGM-148_Javelin#Training)
 
+## Interesting VideoJS Plugins
+- [ ] [`videojs-errors` - A plugin that displays user-friendly messages when Video.js encounters an error.](https://www.npmjs.com/package/videojs-errors)
+- [ ] [`videojs-hotkeys` - A plugin for Video.js that enables keyboard hotkeys when the player has focus.](https://www.npmjs.com/package/videojs-hotkeys)
 
